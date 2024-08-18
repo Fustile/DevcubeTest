@@ -6,9 +6,36 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: cormorant;
+    src: url(/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: jost;
+    src: url(/fonts/Jost/static/Jost-Regular.ttf);
+}
+
+@font-face {
+    font-family: lusitana;
+    src: url(/fonts/Lusitana/Lusitana-Regular.ttf);
+}
+
+.header__navigation, .hero__info_desc, .hero__info_button {
+    font-family: jost;
+}
+
+.cart_counter-number, .hero__motivator {
+    font-family: lusitana;
+}
+
+.hero__info_message, .hero__info_slogan {
+    font-family: cormorant;
+}
+
+
+
 html {
-    /* height:100%;
-    width: 100%; */
     scroll-behavior: smooth;
     font-family: Arial;
     color: #efefef;
@@ -71,6 +98,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: black;
+    font-size: 2vmin;
 }
 
 .header__cart {
@@ -97,6 +125,13 @@ header {
     width: 2.4vmin;
     background: var(--Text, #231F20);
     border-radius: 100%;
+}
+
+.cart__counter-number {
+    font-size: 1.6vmin;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    text-align: center;
 }
 
 
@@ -138,41 +173,27 @@ header {
 
 .bun1.bun_original {
     width: 47.9vmin;
-    /* height: 23.3vmin; */
     top: 0;
     left: 0;
-    /* angle: 30 deg; */
-    /* transform: rotateY(30deg); */
 }
 
 .bun1.bun_alt {
     width: 47.9vmin;
-    /* height: 23.3vmin; */
     top: 3%;
     left: 3%;
-    /* angle: 30 deg; */
-    /* transform: rotateY(30deg); */
 }
 
 
 .bun2.bun_original {
     width: 47.9vmin;
-    /* height: 23.3vmin; */
     top: 0;
-    /* left: 84.58vmin; */
     right: 32%;
-    /* angle: 18.74 deg; */
-    /* transform: rotateY(18.74deg); */
 }
 
 .bun2.bun_alt {
     width: 47.9vmin;
-    /* height: 23.3vmin; */
     top: 0;
-    /* left: 86.5vmin; */
     right: 29%;
-    /* angle: 18.74 deg; */
-    /* transform: rotateY(18.74deg); */
 }
 
 
@@ -217,9 +238,77 @@ header {
 
 .hero__info {
     position: absolute;
-    top: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 37%;
+    top: 24%;
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 16px;
+}
+
+.hero__info_message {
+    color: #CF8C0B;
+    font-size: 2vmin;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero__info_slogan h1 {
+    font-size: 9.6vmin !important; 
+    font-weight: 500 !important;
+    line-height: 96px !important;
+    letter-spacing: -0.035em !important;
+    text-align: center;
+    color: #231F20;
+}
+
+.hero__info_desc {
+    font-size: 2vmin;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: #231F20;
+}
+
+.hero__info_button {
+    width:  19.6vmin;
+    height: 6vmin;
+    padding: 1.6vmin 3.2vmin 1.6vmin 3.2vmin;
+    background-color: #CF8C0B1A;
+    border: 1px solid #CF8C0B;
+
+    font-size: 2vmin;
+    font-weight: 500;
+    line-height: 2.8vmin;
+    text-align: left;
+    color: #231F20;
+    box-shadow: 2px 2px 0px 0px #F9EFE0;
+
+}
+
+.button__arrow {
+    position: relative;
+    right: -1.2vmin;
+}
+
+.hero__motivator {
+    position: absolute;
+    width:  15.3vmin;
+    height:  4.8vmin;
+    right: -3%;
+    top: 23%;
+    padding: 16px;
+    outline: 2px dashed #CF8C0B1A ;
+    background: #CF8C0B1A;
+    transform: rotate(-90deg);
+    font-size: 1.6vmin;
+    font-weight: 700;
+    line-height: 1.6vmin;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #CF8C0B;
 }
 
 
