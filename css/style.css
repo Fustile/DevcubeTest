@@ -21,7 +21,8 @@
     src: url(/fonts/Lusitana/Lusitana-Regular.ttf);
 }
 
-.header__navigation, .hero__info_desc, .hero__info_button {
+.header__navigation, .hero__info_desc, .hero__info_button, 
+.about__info_message, .about__info_desc, .about__info_socials {
     font-family: jost;
 }
 
@@ -29,7 +30,7 @@
     font-family: lusitana;
 }
 
-.hero__info_message, .hero__info_slogan {
+.hero__info_message, .hero__info_slogan, .about__info_slogan {
     font-family: cormorant;
 }
 
@@ -145,6 +146,7 @@ header {
 }
 
 .hero__container {
+    position: relative;
     width: 100%;
     height: 100vmin;
     background: linear-gradient(107.15deg, rgba(255, 255, 255, 0.2) 0%, rgba(236, 236, 236, 0.2) 100%);
@@ -241,21 +243,21 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 37%;
-    top: 24%;
+    width: 40%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    gap: 16px;
+    gap: 2.5vmin;
 }
 
-.hero__info_message {
+.hero__info_message, .about__info_message {
     color: #CF8C0B;
     font-size: 2vmin;
     font-weight: 600;
     text-align: center;
 }
 
-.hero__info_slogan h1 {
+.hero__info_slogan h1, .about__info_slogan h1 {
     font-size: 9.6vmin !important; 
     font-weight: 500 !important;
     line-height: 96px !important;
@@ -264,7 +266,7 @@ header {
     color: #231F20;
 }
 
-.hero__info_desc {
+.hero__info_desc, .about__info_desc {
     font-size: 2vmin;
     font-weight: 400;
     line-height: 28px;
@@ -273,7 +275,7 @@ header {
 }
 
 .hero__info_button {
-    width:  19.6vmin;
+    width:  20vmin;
     height: 6vmin;
     padding: 1.6vmin 3.2vmin 1.6vmin 3.2vmin;
     background-color: #CF8C0B1A;
@@ -295,7 +297,7 @@ header {
 
 .hero__motivator {
     position: absolute;
-    width:  15.3vmin;
+    width:  16.3vmin;
     height:  4.8vmin;
     right: -3%;
     top: 23%;
@@ -315,12 +317,50 @@ header {
 
 #about {
     background: #FFFCF8;
-    border-bottom: 4px solid var(--Decoration, #CF8C0B1A)
+    border-bottom: 4px dashed var(--Decoration, #CF8C0B1A)
 }
 
 .about__container {
+    position: relative;
     width: 100%;
-    height: 100vmin;
+    height: 158vmin;
     background: #FFFCF8;
+}
 
+.about__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 16px;
+}
+
+.about__info_slogan {
+    position: relative;
+}
+
+.about__slogan-bg {
+    position: absolute;
+    width: 49vmin;
+    height: 3.2vmin;
+    top: 6.3vmin;
+    left: 50%;
+    z-index: -1;
+    background-color: #F9EFE0;
+    transform: translate(-50%, -50%);
+}
+
+.about__info_socials {
+    display: flex;
+    align-items: center;
+    font-size: 2vmin;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #231F20;
+    gap: 2vmin;
 }
